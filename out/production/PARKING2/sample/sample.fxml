@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="801.0" text="Gestion Parking" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <content>
+      <FlowPane prefHeight="318.0" prefWidth="598.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="290.0">
+               <children>
+                  <TableView fx:id="tableVoitures" layoutX="14.0" layoutY="8.0" onMouseClicked="#getVoiture" prefHeight="200.0" prefWidth="361.0">
+                    <columns>
+                      <TableColumn fx:id="nomsVoitures" prefWidth="102.0" text="Nom" />
+                      <TableColumn fx:id="plaquesVoitures" prefWidth="109.0" text="PI" />
+                       <TableColumn fx:id="identitesConducteurs" prefWidth="149.0" text="Nom et Prénom" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="208.0" prefWidth="381.0">
+               <children>
+                  <TableView fx:id="tablePersonnes" layoutX="82.0" layoutY="4.0" onMouseClicked="#getPersonne" prefHeight="200.0" prefWidth="324.0">
+                    <columns>
+                      <TableColumn fx:id="nomsPersonnes" prefWidth="172.0" text="Nom" />
+                      <TableColumn fx:id="prenomsPersonnes" prefWidth="151.0" text="Prénom" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="231.0" prefWidth="781.0">
+               <children>
+                  <Label layoutX="51.0" layoutY="28.0" text="Nom :" />
+                  <TextField fx:id="nomVoiture" layoutX="106.0" layoutY="24.0" />
+                  <Label layoutX="54.0" layoutY="66.0" text="PI :" />
+                  <TextField fx:id="PlaqueVoiture" layoutX="106.0" layoutY="62.0" />
+                  <ComboBox fx:id="comboBoxConducteurs" layoutX="106.0" layoutY="103.0" onAction="#getConducteur" prefWidth="150.0" />
+                  <Label layoutX="438.0" layoutY="28.0" text="Nom :" />
+                  <TextField fx:id="nomPersonne" layoutX="488.0" layoutY="24.0" />
+                  <Label layoutX="424.0" layoutY="66.0" text="Prénom :" />
+                  <TextField fx:id="prenomPersonne" layoutX="488.0" layoutY="62.0" />
+
+
+                  <Button layoutX="106.0" layoutY="172.0" mnemonicParsing="false" text="Exporter les données au format XML" />
+                  <Button layoutX="471.0" layoutY="172.0" mnemonicParsing="false" text="Exporter les données au format HTML" />
+                  <Button layoutX="106.0" layoutY="136.0" mnemonicParsing="false" onAction="#ajouterVoiture" text="Ajouter" />
+                  <Button layoutX="174.0" layoutY="136.0" mnemonicParsing="false" onAction="#modifierVoiture" text="Modifier" />
+                  <Button layoutX="242.0" layoutY="136.0" mnemonicParsing="false" onAction="#supprimerVoiture" text="Supprimer" />
+                  <Button layoutX="472.0" layoutY="136.0" mnemonicParsing="false" onAction="#ajouterPersonne" text="Ajouter" />
+                  <Button layoutX="537.0" layoutY="136.0" mnemonicParsing="false" onAction="#modifierPersonne" text="Modifier" />
+                  <Button layoutX="611.0" layoutY="136.0" mnemonicParsing="false" onAction="#supprimerPersonne" text="Supprimer" />
+                  <Ellipse fill="DODGERBLUE" layoutX="339.0" layoutY="45.0" radiusX="69.0" radiusY="13.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text layoutX="288.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de la voiture" wrappingWidth="125.548828125" />
+               </children>
+            </AnchorPane>
+         </children>
+      </FlowPane>
+   </content>
+</TitledPane>
